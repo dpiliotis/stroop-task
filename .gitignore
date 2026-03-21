@@ -1,0 +1,9 @@
+.idea
+*.iml
+*secret.json
+/tokens/
+/target/
+/logs/
+
+### Mac OS ###
+.DS_Store

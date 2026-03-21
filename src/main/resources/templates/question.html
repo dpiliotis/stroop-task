@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Question</title>
+<style>
+    h1 {text-align: center;
+      font-weight: bold;
+      font-size: 50px;}
+    .wrapper {text-align: center;}
+    .button {
+      height:150px;
+      width:300px;
+      text-align: center;
+      cursor: pointer;
+      border: none;
+    }
+</style>
+</head>
+<body>
+<h1 th:style="'color:' + ${colorWord.color} + ';'" th:text="${colorWord.word}"></h1>
+<br>
+<form th:action="@{/question}" th:object="${colorWord}" method="post">
+    <input type="hidden" th:value="${colorWord.id}" th:field="*{id}">
+    <input type="hidden" th:value="${colorWord.generatedAt}" th:field="*{generatedAt}">
+    <input type="hidden" th:value="${colorWord.color}" th:field="*{color}">
+    <input type="hidden" th:value="${colorWord.word}" th:field="*{word}">
+    <div class="wrapper">
+        <input th:style="'background-color:' + ${button1} + ';color:' + ${button1} + ';'" type="submit" class="button" name="response" th:value="${button1}" th:field="*{response}">
+        <input th:style="'background-color:' + ${button2} + ';color:' + ${button2} + ';'" type="submit" class="button" name="response" th:value="${button2}" th:field="*{response}">
+    </div>
+    <div class="wrapper">
+        <input th:style="'background-color:' + ${button3} + ';color:' + ${button3} + ';'" type="submit" class="button" name="response" th:value="${button3}" th:field="*{response}">
+        <input th:style="'background-color:' + ${button4} + ';color:' + ${button4} + ';'" type="submit" class="button" name="response" th:value="${button4}" th:field="*{response}">
+    </div>
+</form>
+</body>
+</html>

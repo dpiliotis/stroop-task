@@ -1,0 +1,4 @@
+numOfQuestions: 60
+logging:
+  file:
+    name: logs/app.log

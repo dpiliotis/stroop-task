@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result</title>
+<style>
+    h1 {text-align: center;}
+    .wrapper {text-align: center;}
+</style>
+</head>
+<body>
+<h1>Thank you</h1>
+<table style="margin: 0px auto;">
+    <tr>
+        <th>Result:</th>
+        <td th:text="${result}"></td>
+    </tr>
+</table>
+<table style="margin: 0px auto;">
+    <tr>
+        <th>Average Response Time in ms:</th>
+        <td th:text="${averageResponseTime}"></td>
+    </tr>
+</table>
+<br>
+<div class="wrapper">
+    <a style="font-size: 20px;" th:href="@{/index}">Back to home</a>
+</div>
+</body>
+</html>
